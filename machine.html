@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Face Recognition</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    
+       <link rel="stylesheet" href="structure.css">
+    </head>
+    <body style="background-color: lightcyan;">
+        <center>
+            <h2 style="font-weight: 600;">Face Recognition</h2>
+            <br>
+            <p style="font-weight: 600; color: black;">Put Your father , mother , your in front of camera</p>
+            <br>
+            <div id="bars_controller" class="container">
+            <div id="bar_1">Mother</div>
+            <br>
+            <div id="bar_2">Father</div>
+            <br>
+            <div id="bar_3">Parth</div>
+            </div>
+            <div id="outputAll" class="container">
+                 <br>
+                 <label>Your Camera : </label>
+                 <br>
+                 <div id="camera"></div>
+                 <br>
+                 <br>
+                 <label>Image Result : </label>
+                 <div id="result"></div>
+            </div>
+                <br>
+                <button type="button" id="clickImage" onclick="take_image()" class="btn btn-success btn-md">Take Image</button>
+                <br>
+                <br>
+                <button type="button" id="checkImage" onclick="check_image()" class="btn btn-warning btn-md">Check Image</button>
+                <br>
+                <br>
+                <div id="outputResult">
+                    <br>
+                    <h3 id="object" style="color: lightcoral;">Object : <span id="objectTxt"></span></h3>
+                    <br>
+                    <h3 id="accuracy" style="color: lightcoral;">Accuracy : <span id="AccuracyTxt"></span></h3>
+            </div>
+        </center>
+        <script src="control.js"></script>
+    </body>
+</html>
